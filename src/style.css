@@ -10,28 +10,35 @@
 
 body {
   overflow-x: hidden;
-  font-family: "Roboto", sans-serif;
 }
 body p {
   font-size: 16px;
+  font-family: "Lato", sans-serif;
 }
 body h1 {
   font-size: 49px;
+  font-family: "Roboto", sans-serif;
 }
 body h2 {
   font-size: 39px;
+  font-family: "Roboto", sans-serif;
 }
 body h3 {
   font-size: 31px;
+  font-family: "Roboto", sans-serif;
 }
 body h4 {
   font-size: 25px;
+  font-family: "Roboto", sans-serif;
 }
 body h5 {
   font-size: 20px;
+  font-family: "Roboto", sans-serif;
 }
 body h6 {
   font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
 }
 
 :root {
@@ -45,11 +52,11 @@ body h6 {
   --black-10: rgba(11, 2, 18, 0.1);
   --black-5: rgba(11, 2, 18, 0.05);
   --white: #f0e8f7;
-  --white-75: rgba(240, 232, 247, .75)
-  --white-50: rgba(240, 232, 247, .50)
-  --white-25: rgba(240, 232, 247, .25)
-  --white-10: rgba(240, 232, 247, .10)
-  --white-5: rgba(240, 232, 247, .05)
+  --white-75: rgba(240, 232, 247, 0.75);
+  --white-50: rgba(240, 232, 247, 0.5);
+  --white-25: rgba(240, 232, 247, 0.25);
+  --white-10: rgba(240, 232, 247, 0.1);
+  --white-5: rgba(240, 232, 247, 0.05);
   --error: #a70000;
 }
 
@@ -61,7 +68,6 @@ body h6 {
   height: 100px;
   width: 100vw;
   background-color: white;
-  font-family: "Roboto", sans-serif;
   position: relative;
   padding: 12px 64px;
   border-bottom: 1px solid var(--black-25);
@@ -102,13 +108,11 @@ body h6 {
 }
 .hero .call-to-action h1 {
   font-size: 64px;
-  font-family: "Lato", sans-serif;
   width: 160px;
 }
 .hero .call-to-action h2 {
   width: 496px;
   color: var(--black-75);
-  font-family: "Roboto", sans-serif;
 }
 .hero .call-to-action button {
   background-color: var(--primary);
@@ -165,4 +169,51 @@ body h6 {
 .sponsor .sponsor-wave {
   position: absolute;
   bottom: 0;
+  width: 100vw;
+}
+
+.progli-container {
+  background: linear-gradient(var(--secondary), var(--tertiary));
+  padding: 28px;
+}
+.progli-container .proglis {
+  position: relative;
+}
+.progli-container .proglis .progli-wide-image {
+  width: 100%;
+  height: 168px;
+  position: absolute;
+  z-index: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.progli-container .proglis .progli-profile-text {
+  padding-top: 48px;
+  padding-left: 16px;
+  display: flex;
+}
+.progli-container .proglis .progli-profile-text .progli-profile {
+  min-width: 248px;
+  min-height: 248px;
+  width: 248px;
+  height: 248px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100%;
+  z-index: 2;
+}
+.progli-container .proglis .progli-profile-text .progli-text {
+  z-index: 2;
+  margin-top: 126px;
+  margin-left: 4px;
+}
+.progli-container .proglis .progli-profile-text .progli-text h6 {
+  color: var(--white);
+}
+.progli-container .proglis .progli-profile-text .progli-text p {
+  margin-top: 4px;
+  color: var(--white-75);
+}
+.progli-container .proglis:not(:first-child) {
+  margin-top: 32px;
 }/*# sourceMappingURL=style.css.map */
