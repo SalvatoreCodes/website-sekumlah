@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+
+  p {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 49px;
+  }
+
+  h2 {
+    font-size: 39px;
+  }
+
+  h3 {
+    font-size: 31px;
+  }
+
+  h4 {
+    font-size: 25px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+
+  h6 {
+    font-size: 16px;
+  }
+}
+
+:root {
+  --primary: #6918b4;
+  --secondary: #c210ad;
+  --tertiary: #1014c2;
+  --black: #0b0212;
+  --black-75: rgba(11, 2, 18, 0.75);
+  --black-50: rgba(11, 2, 18, 0.5);
+  --black-25: rgba(11, 2, 18, 0.25);
+  --black-10: rgba(11, 2, 18, 0.1);
+  --black-5: rgba(11, 2, 18, 0.05);
+  --white: #f0e8f7;
+  --white-75: rgba(240, 232, 247, .75)
+  --white-50: rgba(240, 232, 247, .50)
+  --white-25: rgba(240, 232, 247, .25)
+  --white-10: rgba(240, 232, 247, .10)
+  --white-5: rgba(240, 232, 247, .05)
+  --error: #a70000;
+
+  //font-family
+  //base size: 16px, scale: 1.250
+
+  //Paragraph: lato
+  //Heading: Roboto
+
+  //Paragraph: 16px
+  //H1: 49px
+  //H2: 39px
+  //H3: 31px
+  //H4: 25px
+  //H5: 20px
+  //H6: 16px
+}
+
+.hero {
+  height: 100vh;
+  width: 100vw;
+
+  .hero--navbar {
+    height: 100px;
+    width: 100vw;
+    background-color: white;
+    font-family: "Roboto", sans-serif;
+    position: relative;
+    padding: 12px 64px;
+    border-bottom: 1px solid var(--black-25);
+
+    .hero--navbar--navigations {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      gap: 16px;
+
+      a {
+        text-decoration: none;
+        color: var(--black);
+        transition: all 0.25s ease-in-out;
+      }
+
+      a:hover {
+        scale: 1.1;
+      }
+    }
+
+    .hero--navbar--socials {
+      display: flex;
+      position: absolute;
+      right: 64px;
+      top: 50%;
+      transform: translateY(-50%);
+      gap: 32px;
+
+      a {
+        cursor: pointer;
+        transition: all .25s ease-in-out;
+      }
+
+      a:hover {
+        scale: 1.2;
+      }
+    }
+  }
+
+  .call-to-action {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    h1 {
+      font-size: 64px;
+      font-family: 'Lato', sans-serif;
+      width: 160px;
+    }
+    h2 {
+      width: 496px;
+      color: var(--black-75);
+      font-family: 'Roboto', sans-serif;
+    }
+    button{
+      background-color: var(--primary);
+      color: var(--white);
+      border-radius: 8px;
+      border-style: none;
+      padding: 16px 24px;
+      font-size: 36px;
+      font-weight: bold;
+      width: max-content;
+      cursor: pointer;
+      transition: all .25s ease-in-out;
+    }
+
+    button:hover {
+      background-color: var(--secondary);
+      scale: 1.1;
+    }
+  }
+  .hero--content {
+    padding: 128px 64px 0 64px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.sponsor {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+
+  .sponsor-sponsors-container {
+    background: linear-gradient(var(--primary), var(--secondary));
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 0;
+    gap: 24px;
+    
+    h6 {
+      color: var(--white);
+    }
+
+    .sponsor-sponsors {
+      display: flex;
+      gap: 48px;
+      margin-bottom: 16px;
+    }
+  }
+
+  .testimony-container {
+    display: flex;
+    gap: 64px;
+    justify-content: center;
+    margin: 32px 0 ;
+    flex-wrap: wrap;
+  }
+
+  .sponsor-wave {
+    position: absolute;
+    bottom: 0;
+  }
+}
